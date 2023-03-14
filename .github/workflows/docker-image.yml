@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag node_test:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/soewin/node_test:latest
+      run: docker push ${{secrets.DOCKER_USER}}/kosoewin/node_test:latest
