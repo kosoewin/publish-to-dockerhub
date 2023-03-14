@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag soewin/nodejs:$(date +%s)
     - name: push the docker images
-      run: docker push soewin/nodejs:latest
+      run: docker push soewin/nodejs:$(date +%s)
