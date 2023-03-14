@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build -t nodejs .
     - name:  tag the image
-      run: docker tag nodejs:1.0 soewin/nodejs:1.0
+      run: docker tag nodejs:latest soewin/nodejs:latest
     - name: push the docker images
-      run: docker push soewin/nodejs:1.0
+      run: docker push soewin/nodejs:latest
