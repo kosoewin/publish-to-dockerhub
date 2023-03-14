@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 env:
   DOCKER_USER: ${{secrets.DOCKER_USER}}
-  DOCKER_PASSWORD: ${{secrets.DOCKERHUB_TOKEN}} 
+  DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}} 
 
 jobs:
 
@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: docker login
-      run: docker login -u $DOCKER_USER -p $DOCKERHUB_TOKEN
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build -t nodejs .
